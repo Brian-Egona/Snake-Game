@@ -25,22 +25,25 @@ public class Snake : MonoBehaviour
     // Called every frame to handle player input
     private void Update()
     {
-        // Change direction based on key press (prevent reverse movement)
-        if (Input.GetKeyDown(KeyCode.W))  // Move up
+        if (!PauseMenu.isPaused)
         {
-            _direction = Vector2.up;
-        }
-        else if (Input.GetKeyDown(KeyCode.S))  // Move down
-        {
-            _direction = Vector2.down;
-        }
-        else if (Input.GetKeyDown(KeyCode.A))  // Move left
-        {
-            _direction = Vector2.left;
-        }
-        else if (Input.GetKeyDown(KeyCode.D))  // Move right
-        {
-            _direction = Vector2.right;
+            // Change direction based on key press (prevent reverse movement)
+            if (Input.GetKeyDown(KeyCode.W))  // Move up
+            {
+                _direction = Vector2.up;
+            }
+            else if (Input.GetKeyDown(KeyCode.S))  // Move down
+            {
+                _direction = Vector2.down;
+            }
+            else if (Input.GetKeyDown(KeyCode.A))  // Move left
+            {
+                _direction = Vector2.left;
+            }
+            else if (Input.GetKeyDown(KeyCode.D))  // Move right
+            {
+                _direction = Vector2.right;
+            }
         }
     }
 
